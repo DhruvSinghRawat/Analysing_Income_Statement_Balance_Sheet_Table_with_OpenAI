@@ -1,17 +1,18 @@
+
 import streamlit as st
 from utils.table_extraction import extract_tables_from_pdf
-from utils.summarization import summarize_table
+from utils.summarization import  summarize_table
 import pandas as pd
 import os
 import uuid
 from mistralai import Mistral
-from PyPDF2 import PdfReader  # Added for PDF preview
+from PyPDF2 import PdfReader  # Added for PDF previewpip install opencv-python-headless
+
 import base64
 
 
-
 def main():
-    # Set page configuration 
+    # Set page configuration
     st.set_page_config(
         page_title="📄 PDF Table Extraction & Summarization",
         layout="wide",
@@ -336,13 +337,13 @@ def main():
             # ------------------ Summarization Section ------------------
             st.markdown('<div class="section"><div class="subheader">📝 Summarization</div>', unsafe_allow_html=True)
             if dfs:
-                #llm_pipeline = initialize_llm_pipeline()
+                # llm_pipeline = initialize_llm_pipeline()
                 # Summarization
                 st.header("📝 Summarization")
                 try:
                     for idx, df in enumerate(dfs):
                         table_text = df.to_string(index=False)
-                        summary = summarize_table( table_text)
+                        summary = summarize_table(table_text)
                         st.subheader(f"Summary of Table {idx + 1}")
                         
                         st.write(summary)
