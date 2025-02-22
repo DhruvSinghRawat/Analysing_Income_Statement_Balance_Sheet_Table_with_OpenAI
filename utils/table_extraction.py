@@ -1,8 +1,6 @@
 import json
 from unstructured.partition.pdf import partition_pdf
 import pandas as pd
-import nltk
-nltk.download('punkt')
 
 def extract_tables_from_pdf(filename, strategy='hi_res'):
     """

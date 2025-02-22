@@ -1,30 +1,30 @@
-#from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+# from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import os
 from mistralai import Mistral
 
-"""def initialize_llm_pipeline(model_name="mistralai/Mistral-7B-Instruct-v0.2"):
+# def initialize_llm_pipeline(model_name="mistralai/Mistral-7B-Instruct-v0.2"):
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+#     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        device_map="auto",
-        # cache_dir="/Users/jitendrakolli/Downloads/Infosys/Project/cache",
-        # load_in_8bit=True  # Enable 8-bit quantization if needed
-    )
+#     model = AutoModelForCausalLM.from_pretrained(
+#         model_name,
+#         device_map="auto",
+#         # cache_dir="/Users/jitendrakolli/Downloads/Infosys/Project/cache",
+#         # load_in_8bit=True  # Enable 8-bit quantization if needed
+#     )
 
 
-    llm_pipeline = pipeline(
-        "text-generation",
-        model=model,
-        tokenizer=tokenizer,
-        device_map="auto",
-        batch_size=1
-    )
+#     llm_pipeline = pipeline(
+#         "text-generation",
+#         model=model,
+#         tokenizer=tokenizer,
+#         device_map="auto",
+#         batch_size=1
+#     )
 
-    return llm_pipeline"""
+#     return llm_pipeline
 
-def summarize_table(table_text, max_new_tokens=100, num_return_sequences=1):
+def summarize_table( table_text, max_new_tokens=100, num_return_sequences=1):
    
     prompt = (
         "Summarize the following table data:\n\n" 
