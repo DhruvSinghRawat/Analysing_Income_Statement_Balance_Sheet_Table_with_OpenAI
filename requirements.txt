@@ -30,6 +30,13 @@ beautifulsoup4>=4.9.3  # For table parsing
 html5lib>=1.1  # Alternative HTML parser
 tabulate>=0.8.9  # For table formatting
 
+#For Deployment
+opencv-python-headless
+unstructured
+unstructured-inference
+torch
+
+
 # Note: Some packages might require system-level dependencies:
 # - poppler-utils (for pdf2image)
 # - tesseract-ocr (for pytesseract)
