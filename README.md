@@ -17,7 +17,7 @@ Follow these steps to set up the project locally:
 
 1. **🔀 Clone the Repository:**
    ```bash
-   git clone https://github.com/jitendra-789/Analysing_Income_Statement_with_LLM.git
+   git clone https://github.com/DhruvSinghRawat/Analysing_Income_Statement_Balance_Sheet_Table_with_OpenAI.git
    ```
 
 2. **📥 Install Required System Dependencies:**
